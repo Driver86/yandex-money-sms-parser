@@ -1,2 +1,2 @@
 # yandex-money-sms-parser
-Yandex.Money SMS parser
+"Умный" парсер смс-сообщений Яндекс.Денег.
