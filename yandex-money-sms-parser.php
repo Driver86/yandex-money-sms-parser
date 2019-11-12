@@ -13,7 +13,7 @@ function yandexMoneySmsParser(string $text): array
         return $match[1] . $match[3];
     }, $text);
 
-    $text = preg_replace_callback('/(^|[^0-9]+)([0-9]+([,.][0-9]{1,2})?)(р\.|руб\.)/', function ($match) use (&$data) {
+    $text = preg_replace_callback('/(^|[^0-9]+)([0-9]+([,.][0-9]{1,2})?) ?(р\.|руб\.)/', function ($match) use (&$data) {
         $data['amount'] = $match[2];
         return $match[1] . $match[4];
     }, $text);
